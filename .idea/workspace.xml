@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="225935ab-7998-41b7-91fb-f3a9a69130e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/specify/.gitignore" afterDir="false" />
+    <list default="true" id="225935ab-7998-41b7-91fb-f3a9a69130e8" name="Changes" comment="Added authorization system&#10;All routes are work properly except for deleteUser.ts">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middlewares/isSetCookies/exceptionsForCookieCheck.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middlewares/isSetCookies/isSetCookies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -23,12 +28,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-authorization.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/ws-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-tests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/graphql-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/different-responses.http" environment="test" />
+    <file url="file:///private/var/folders/fy/ynws81_j4wg2hl_1mznb95wc0000gn/T/whats-new-dir/whats-new.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2d3ONA1iyiOTKrxKaFu9iTmr7WF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -37,43 +55,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "HTTP Request.createUser | #1.executor": "Run",
-    "HTTP Request.deleteUser | #1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
-    "last_opened_file_path": "/Users/nikitatsarenko/programming/back/projects/specify",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Debug",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "/Users/nikitatsarenko/programming/back/projects/specify/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;HTTP Request.All in createUser.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.createUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.deleteUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.isExist | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.isValidEmailAndPassword | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.post-requests | Send POST request with json body.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.updateUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nikitatsarenko/programming/back/projects/specify&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nikitatsarenko/programming/back/projects/specify/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTTP Request"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTTP Request&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$APPLICATION_CONFIG_DIR$/scratches/auth" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/middlewares/isSetCookies" />
+      <recent name="$PROJECT_DIR$/src/routes/auth/manageUserData" />
+      <recent name="$PROJECT_DIR$/src/routes/auth/verify" />
+      <recent name="$PROJECT_DIR$/src/modules/auth/manageUserData" />
+      <recent name="$PROJECT_DIR$/src/modules/auth/verify" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration name="All in createUser" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/createUser.http">
+      <method v="2" />
+    </configuration>
     <configuration name="createUser | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/createUser.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="deleteUser | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/deleteUser.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="isExist | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/isExist.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="isValidEmailAndPassword | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/isValidEmailAndPassword.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="updateUser | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/updateUser.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -87,14 +127,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.All in createUser" />
+      <item itemvalue="HTTP Request.isExist | #1" />
+      <item itemvalue="HTTP Request.isValidEmailAndPassword | #1" />
+      <item itemvalue="HTTP Request.updateUser | #1" />
       <item itemvalue="HTTP Request.createUser | #1" />
-      <item itemvalue="HTTP Request.deleteUser | #1" />
       <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.deleteUser | #1" />
+        <item itemvalue="HTTP Request.updateUser | #1" />
         <item itemvalue="HTTP Request.createUser | #1" />
+        <item itemvalue="HTTP Request.isValidEmailAndPassword | #1" />
+        <item itemvalue="HTTP Request.isExist | #1" />
+        <item itemvalue="HTTP Request.All in createUser" />
       </list>
     </recent_temporary>
   </component>
@@ -107,10 +153,40 @@
       <option name="presentableId" value="Default" />
       <updated>1709233252950</updated>
       <workItem from="1709233254003" duration="12663000" />
+      <workItem from="1709322057765" duration="9337000" />
+      <workItem from="1709384292945" duration="22889000" />
+      <workItem from="1709578224175" duration="7043000" />
+      <workItem from="1709644953519" duration="1412000" />
+      <workItem from="1709652306874" duration="14036000" />
+      <workItem from="1709747419493" duration="3813000" />
+      <workItem from="1709753819124" duration="93000" />
+      <workItem from="1709754023037" duration="9664000" />
+      <workItem from="1709982916488" duration="9377000" />
+      <workItem from="1710267464780" duration="5296000" />
     </task>
+    <task id="LOCAL-00001" summary="Added authorization system&#10;All routes are work properly except for deleteUser.ts">
+      <option name="closed" value="true" />
+      <created>1710266125357</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710266125357</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myShow1" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added authorization system&#10;All routes are work properly except for deleteUser.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added authorization system&#10;All routes are work properly except for deleteUser.ts" />
   </component>
 </project>
