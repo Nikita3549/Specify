@@ -1,9 +1,15 @@
 import { Router } from 'express';
-import auth from './auth';
+import TypeRoute from "../globalTypes/types/routes";
+import auth from './user';
+import songs from "./songs";
 
 const router = Router()
+const index: Array<TypeRoute> = [
+    ...auth,
+    ...songs
+]
 
-auth.forEach((element): void => {
+index.forEach((element) => {
     element(router)
 })
 

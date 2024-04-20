@@ -23,7 +23,7 @@ class SendStream {
 
    private stream(_req: Request, res: Response){
       const stream: Stream = {
-         readStream: fs.createReadStream(this.songData.filePath),
+         readStream: fs.createReadStream(this.songData.filePath, { start: this.chunk.start, end: this.chunk.end}),
 
          start(){
             this.readStream.pipe(res)

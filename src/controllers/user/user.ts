@@ -1,7 +1,10 @@
 import {TypeSendStatusFull} from "../../globalTypes/types/sendStatus";
 import {TypeSendStatusMinify} from "../../globalTypes/types/sendStatus";
+import isValidPasswordAndEmailReqBody from "./interfaces/isValidReqBody";
 import Status from "../../globalTypes/enums/status";
 import user from "../../models/user/index";
+import isValidReqBody from "./interfaces/isValidReqBody";
+import httpStatus from "../../globalTypes/enums/httpStatus";
 
 class User{
     private async userMethodsErrorHandler(req: any, res: any, handleMethod: any): Promise<void>{
@@ -44,7 +47,12 @@ class User{
         }
     }
 
-    public isValidPasswordAndEmail(req: any, res: any): Promise<void>{
+    public async isValidPasswordAndEmail(req: any, res: any): Promise<void>{
+        if (Object.keys(req.body).length !== 2 || !req.body?.email || !req.body?.password){
+            res.status(httpStatus.BadRequest).send()
+            return
+        }
+
         return this.userMethodsErrorHandler(req, res, user.isValidPasswordAndEmail)
     }
 

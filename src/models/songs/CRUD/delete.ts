@@ -12,9 +12,9 @@ class Delete{
     }
 
     public async handle(req: any, res: any){
-        const filePath: string = await this.filePath(req, res)
-
         try{
+            const filePath: string = await this.filePath(req, res)
+
             await this.DBConnection.sendQuery(`DELETE FROM songs WHERE id = '${req.params.songId}'`)
                 .then(() => {
                     this.fs.unlink(filePath)
@@ -22,10 +22,11 @@ class Delete{
                 }, (_err: any) => {
                     res.status(httpStatus.InternalServerError).send()
                 })
-        }
+            }
         catch (_err){
             res.status(httpStatus.NotFound).send('song doesn\'t exist')
         }
+
     }
 
     private async filePath(req: any, _res: any): Promise<string>{

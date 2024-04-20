@@ -1,19 +1,20 @@
-import DBConnection from "../../modules/DBConnection";
+import DBConnection from "../../models/DBConnection";
 import exceptionsForCookieCheck from "./exceptionsForCookieCheck";
+import httpStatus from "../../globalTypes/enums/httpStatus";
 
-function isSetCookies(req: any, res: any, next: any): void{
+function isSetCookies(req: any, res: any, next: any){
     if (exceptionsForCookieCheck.includes(req.url)){
         next()
         return
     }
-    DBConnection.sendQuery(`SELECT id FROM users WHERE id = '${req.cookies.userToken}'`)
+    DBConnection.sendQuery(`SELECT email FROM users WHERE id = '${req.cookies.userToken}';`)
         .then(rows => {
             if (rows.length){
                 next()
             } else{
-                res.send({ status: 'ok', message: 'user isn\'t authorized on page or userToken doesn\'t exist or url isn\'t in exceptions' })
+                res.status(httpStatus.Unauthorized).send()
             }
-        }, (err) => res.send({ status: 'error', message: 'DBConnection error during verify userToken', errObject: err}))
+        }, (_err) => res.status(httpStatus.InternalServerError).send())
 }
 
 export default isSetCookies

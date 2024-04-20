@@ -1,13 +1,14 @@
 import songs from "../../../controllers/songs/songs";
 import multer from "multer";
 import fs from "fs";
+import isAuthor from "../../../middlewares/isAuthor/isAuthor";
 
 const upload: multer.Multer = multer({ dest: `songs/${new Date().toLocaleDateString('ru-Ru')}`, limits: {
         fieldSize: 10 * 1024 * 1024
     }})
 
 export default function (router: any): void {
-    router.post('/songs/uploadSong', upload.single("song"), (req: any, res: any): void => {
+    router.post('/songs/uploadSong', isAuthor, upload.single("song"), (req: any, res: any): void => {
         songs.upload(req, res);
     })
 }

@@ -1,28 +1,27 @@
-import mysql from 'mysql2/promise';
-import {TypeSendStatusFull} from "../globalTypes/types/sendStatus";
-import Status from "../globalTypes/enums/status";
+import mysql, { Pool } from 'mysql2';
 
 class ClassDBConnection {
-    DBConnection: any
+    promisePool: any
 
     constructor() {
-        this.DBConnection = mysql.createConnection({
+        const pool: Pool = mysql.createPool({
+            connectionLimit: 10,
             host: process.env.MYSQL_HOST,
             user: process.env.MYSQL_USER,
             password: process.env.MYSQL_PASSWORD,
             database: process.env.MYSQL_DATABASE
         })
+        this.promisePool = pool.promise()
     }
 
-    public sendQuery(queryBody: string): Promise<any>{
+    public sendQuery<ServerResponse>(queryBody: string): Promise<ServerResponse | any>{
         return new Promise(async (resolve, reject) => {
             try {
-                await this.DBConnection.then((conn: any) => conn.query(queryBody))
-                    .then(([rows]: Array<unknown>) => {
-                        resolve(rows)
-                    })
+                const [ rows ]: ServerResponse[] = await this.promisePool.query(queryBody)
+
+                resolve(rows)
             } catch (err){
-                reject({ status: Status.Error, message: 'DB connection error', errObject: err})
+                reject(Error('DB connection error'))
             }
         })
     }
