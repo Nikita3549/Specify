@@ -39,7 +39,7 @@ describe('email', () => {
                 const email = (await DBConnection.sendQuery(`SELECT email FROM users LIMIT 1`))[0].email
 
                 await supertest(app).get('/user/isExist')
-                    .send({ email: email, password: 'testpassword'})
+                    .send({ email: email, password: 'wrongPassword'})
                     .expect(404)
             });
         })
