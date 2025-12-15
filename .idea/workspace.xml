@@ -4,17 +4,87 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="225935ab-7998-41b7-91fb-f3a9a69130e8" name="Changes" comment="Append test directory, refactor DBConnection and createServer&#10;&#10;Test directory has only 1 test file( getUserData).&#10;Now DBConnection create pools instead connection.&#10;Every middleware, routes and others contain in individual file">
-      <change afterPath="$PROJECT_DIR$/src/__tests__/search/byParams.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/search/search.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/search/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/search/songsOrPlaylists.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/search/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/search/songsOrPlaylist.ts" afterDir="false" />
+    <list default="true" id="225935ab-7998-41b7-91fb-f3a9a69130e8" name="Changes" comment="Implemented feature 'leave from account'">
+      <change afterPath="$PROJECT_DIR$/../Auth/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/.idea/Auth.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/application/app.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/application/app.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/config/config.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/config/config.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/controllers/userController.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/controllers/userController.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/database/database.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/database/database.object.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/middlewares/authenticationSteps/JWT/JWTVerification.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/middlewares/authenticationSteps/JWT/JWTVerifification.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/middlewares/authenticationSteps/google/googleVerification.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/middlewares/authenticationSteps/google/googleVerification.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/middlewares/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/mail/mailService.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/mail/mailService.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/token/interfaces/refreshAndAccessTokens.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/token/interfaces/tokenService.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/token/tokenService.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/token/types/decodedJWT.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/user/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/user/userService.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/src/service/user/userService.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.idea/ChatGPTFree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/src/languagesService/allPhrases/exportPhrases.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/src/languagesService/allPhrases/interfaces/res.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/src/languagesService/languages/ru/commands/start/start.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/src/languagesService/phrases.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatGPTFree/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/init-db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/postgres.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/application/app.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/application/app.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/config/config.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/config/config.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/controllers/url/URLController.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/controllers/url/URLController.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/exceptions/api-error.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/exceptions/api-error.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/middlewares/api-error.function.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../URLShortner/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/jest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/createServer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/model/db/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/user/account/logout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/user/account/refresh.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/user/account/signIn.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/user/account/signOut.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/routes/user/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/src/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../authService/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fuckenPhysics/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fuckenPhysics/src/survey/survey.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sandbox/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../books" beforeDir="false" afterPath="$PROJECT_DIR$/../books" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/auth/getUserData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/auth/getUserData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,47 +130,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "HTTP Request.All in createUser.executor": "Run",
-    "HTTP Request.createUser | #1.executor": "Run",
-    "HTTP Request.deleteSong | #1.executor": "Run",
-    "HTTP Request.deleteUser | #1.executor": "Run",
-    "HTTP Request.getSongDataById | #1.executor": "Run",
-    "HTTP Request.getStream | #1.executor": "Run",
-    "HTTP Request.isExist | #1.executor": "Run",
-    "HTTP Request.isValidEmailAndPassword | #1.executor": "Run",
-    "HTTP Request.post-requests | Send POST request with json body.executor": "Run",
-    "HTTP Request.scratch | #1.executor": "Run",
-    "HTTP Request.search | #1.executor": "Run",
-    "HTTP Request.updateSong | #1.executor": "Run",
-    "HTTP Request.updateUser | #1.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/nikitatsarenko/programming/back/projects/specify",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Debug",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/Users/nikitatsarenko/programming/back/projects/specify/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;HTTP Request.All in createUser.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.createUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.deleteSong | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.deleteUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.getSongDataById | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.getStream | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.isExist | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.isValidEmailAndPassword | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.leaveAccount | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.post-requests | Send POST request with json body.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.search | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.updateSong | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.updateUser | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.upload | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nikitatsarenko/programming/back/projects/specify&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Debug&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nikitatsarenko/programming/back/projects/specify/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTTP Request"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTTP Request&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/controllers/user/interfaces" />
@@ -111,16 +183,19 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="getSongDataById | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/songs/getSongDataById.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="createUser | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/createUser.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="isValidEmailAndPassword | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/isValidEmailAndPassword.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="isValidEmailAndPassword | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth/isValidEmailAndPassword.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="search | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/search/search.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="leaveAccount | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/account/leaveAccount.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="updateSong | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/songs/updateSong.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="search | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/search/search.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="upload | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/songs/upload.http" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -134,18 +209,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.search | #1" />
+      <item itemvalue="HTTP Request.createUser | #1" />
       <item itemvalue="HTTP Request.isValidEmailAndPassword | #1" />
-      <item itemvalue="HTTP Request.getSongDataById | #1" />
-      <item itemvalue="HTTP Request.updateSong | #1" />
+      <item itemvalue="HTTP Request.leaveAccount | #1" />
+      <item itemvalue="HTTP Request.search | #1" />
+      <item itemvalue="HTTP Request.upload | #1" />
       <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.search | #1" />
+        <item itemvalue="HTTP Request.leaveAccount | #1" />
         <item itemvalue="HTTP Request.isValidEmailAndPassword | #1" />
-        <item itemvalue="HTTP Request.getSongDataById | #1" />
-        <item itemvalue="HTTP Request.updateSong | #1" />
+        <item itemvalue="HTTP Request.upload | #1" />
+        <item itemvalue="HTTP Request.createUser | #1" />
+        <item itemvalue="HTTP Request.search | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +249,33 @@
       <workItem from="1713282385312" duration="22605000" />
       <workItem from="1713362912964" duration="897000" />
       <workItem from="1713368413797" duration="8790000" />
+      <workItem from="1713719481730" duration="2409000" />
+      <workItem from="1714283388936" duration="37000" />
+      <workItem from="1714393305603" duration="28000" />
+      <workItem from="1715428717911" duration="2295000" />
+      <workItem from="1715701479714" duration="5180000" />
+      <workItem from="1716562667354" duration="597000" />
+      <workItem from="1716714248541" duration="5591000" />
+      <workItem from="1719946076845" duration="609000" />
+      <workItem from="1727622575083" duration="6404000" />
+      <workItem from="1729104099059" duration="6484000" />
+      <workItem from="1730659159128" duration="886000" />
+      <workItem from="1731581328312" duration="18000" />
+      <workItem from="1731582565974" duration="684000" />
+      <workItem from="1732116863677" duration="227000" />
+      <workItem from="1733308460921" duration="677000" />
+      <workItem from="1733596231121" duration="16000" />
+      <workItem from="1733760873929" duration="37000" />
+      <workItem from="1735653292433" duration="2301000" />
+      <workItem from="1735759645339" duration="1200000" />
+      <workItem from="1736088177115" duration="1248000" />
+      <workItem from="1737125432501" duration="922000" />
+      <workItem from="1737128128695" duration="608000" />
+      <workItem from="1737136095904" duration="597000" />
+      <workItem from="1737185774719" duration="5070000" />
+      <workItem from="1737282084537" duration="598000" />
+      <workItem from="1740488392203" duration="3651000" />
+      <workItem from="1740502155499" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="Added authorization system&#10;All routes are work properly except for deleteUser.ts">
       <option name="closed" value="true" />
@@ -215,6 +319,7 @@
     <MESSAGE value="Append 5 routes for songs&#10;&#10;1. upload - upload song&#10;2. getStream - get song by stream&#10;3. delete - delete song&#10;4. update - update song data&#10;&#10;5. getSongDataById - get song data" />
     <MESSAGE value="Append test directory, refactor DBConnection and createServer&#10;&#10;Test directory has only 1 test file( getUserData).&#10;Now DBConnection create pools instead connection.&#10;Every middleware, routes and others contain in another file" />
     <MESSAGE value="Append test directory, refactor DBConnection and createServer&#10;&#10;Test directory has only 1 test file( getUserData).&#10;Now DBConnection create pools instead connection.&#10;Every middleware, routes and others contain in individual file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Append test directory, refactor DBConnection and createServer&#10;&#10;Test directory has only 1 test file( getUserData).&#10;Now DBConnection create pools instead connection.&#10;Every middleware, routes and others contain in individual file" />
+    <MESSAGE value="Implemented feature 'leave from account'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented feature 'leave from account'" />
   </component>
 </project>
